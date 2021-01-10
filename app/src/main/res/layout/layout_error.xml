@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_code_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="404" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_description_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="18sp"
+        tools:text="Not found" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/retry_label"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="16sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

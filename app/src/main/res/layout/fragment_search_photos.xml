@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/photo_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:closeIcon="@drawable/ic_close"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="@string/find_hint"
+        app:searchIcon="@drawable/ic_find" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photos_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        tools:listitem="@layout/item_photo" />
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" />
+</androidx.appcompat.widget.LinearLayoutCompat>

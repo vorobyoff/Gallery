@@ -1,0 +1,1 @@
+/home/user/AndroidStudioProjects/Gallery/buildSrc/build/classes/kotlin/main/DependenciesKt.class:/home/user/AndroidStudioProjects/Gallery/buildSrc/build/classes/kotlin/main/Libs.class:/home/user/AndroidStudioProjects/Gallery/buildSrc/build/classes/kotlin/main/Versions.class

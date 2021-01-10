@@ -1,0 +1,15 @@
+<resources>
+    <string name="find_label">Find</string>
+    <string name="link_label">Link</string>
+    <string name="size_label">Size</string>
+    <string name="app_name">Gallery</string>
+    <string name="retry_label">Retry</string>
+    <string name="author_label">Author</string>
+    <string name="size_pattern">%1d × %2d</string>
+    <string name="view_all_label">View all</string>
+    <string name="find_hint">Find your photos…</string>
+    <string name="description_label">Description</string>
+    <string name="unknown_error_msg">Unknown error</string>
+    <string name="connection_failed_error_msg">Connection failed</string>
+    <string name="photos_of_collection_label">Collection\'s photos</string>
+</resources>

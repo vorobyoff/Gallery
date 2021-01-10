@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:selectable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline1
+        </item>
+    </style>
+
+    <style name="SecondaryTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:selectable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnPrimarySurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2
+        </item>
+    </style>
+</resources>
