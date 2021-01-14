@@ -1,9 +1,13 @@
 package com.vorobyoff.gallery.presentation.ui.fragments
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.vorobyoff.gallery.R
@@ -32,7 +36,17 @@ class ViewPhotoFragment : Fragment(R.layout.fragment_view_photo) {
 
     private fun fetchData(): Unit = viewPhotoViewModel.photo(photoId)
 
-    override fun onViewCreated(view: View, state: Bundle?): Unit = observeLiveData()
+    @SuppressLint("QueryPermissionsNeeded")
+    override fun onViewCreated(view: View, state: Bundle?) {
+        observeLiveData()
+        binding.linkTxt.setOnClickListener {
+            val url = Uri.parse("${(it as TextView).text}")
+            val intent = Intent(Intent.ACTION_VIEW, url)
+            if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                startActivity(Intent.createChooser(intent, "Select a browser"))
+            }
+        }
+    }
 
     private fun observeLiveData(): Unit = with(viewPhotoViewModel) {
         photo.observe(viewLifecycleOwner) { onPhotoReceived(it) }

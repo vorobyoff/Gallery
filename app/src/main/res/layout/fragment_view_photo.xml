@@ -6,77 +6,87 @@
     android:fitsSystemWindows="true"
     android:scrollbarSize="0dp">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:fitsSystemWindows="true"
-            android:scaleType="centerCrop" />
+        android:layout_gravity="center">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/SecondaryTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/author_label" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/name_txt"
-                style="@style/BaseTextStyle"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="name" />
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/SecondaryTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/size_label" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author_label" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/size_txt"
-                style="@style/BaseTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="500 x 500" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_txt"
+                    style="@style/BaseTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="name" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/SecondaryTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/description_label" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/size_label" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/description_txt"
-                style="@style/BaseTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Description" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/size_txt"
+                    style="@style/BaseTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="500 x 500" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/SecondaryTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/link_label" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_label" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/link_txt"
-                style="@style/BaseTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Link" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/description_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textIsSelectable="true"
+                    android:textSize="18sp"
+                    tools:text="Description" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SecondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_label" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/link_txt"
+                    style="@style/BaseTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2196F3"
+                    tools:text="Link" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <include
@@ -84,6 +94,7 @@
             layout="@layout/layout_error"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:fitsSystemWindows="true"
+            tools:visibility="gone" />
+    </FrameLayout>
 </ScrollView>
